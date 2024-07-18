@@ -5,42 +5,57 @@
     --body-color: hsl(0, 0%, 0%);
     --line-color: hsla(0, 0%, 100%, 0.2);
     --container-color: hsl(0, 0%, 100%);
-  
+
     --body-font: "Manrope", sans-serif;
     --secondary-font: "DM Mono";
     --h2-font-size: 1.25rem;
     --small-font-size: 0.813rem;
-  }
+}
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: var(--body-color);
     font-family: var(--body-font);
     color: var(--text-color);
 }
 
 a {
-text-decoration: none;
+    text-decoration: none;
 }
 
 
-.header{
-    margin: 0 5rem;
-    position: relative;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: calc(100vw - 10rem);
+    margin: 0 5rem;
     backdrop-filter: blur(2px);
+    z-index: 1000;
 }
 
-section{
+section {
+    position: relative;
     margin: 2rem 5rem;
 }
 
-.navbar{
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--body-color);
+}
+
+.navbar {
+    width: calc(100vw - 10rem);
     position: a;
     display: flex;
     align-items: start;
@@ -48,38 +63,38 @@ section{
     margin: 20px 0;
 }
 
-.navigation{
+.navigation {
     display: flex;
     gap: 1.5rem;
     color: var(--text-color);
 }
 
-.logo{
+.logo {
     color: var(--title-color);
     font-weight: 700;
     font-size: var(--h2-font-size);
 }
 
-.accent-color{
+.accent-color {
     color: var(--first-color);
 }
 
-.line{
+.line {
     background-color: var(--text-color);
     height: 2px;
     border-radius: 10px;
 }
 
-.nav-icon:hover{
+.nav-icon:hover {
     color: var(--title-color);
     transition: 0.2s;
 }
 
-.accent-color.nav-icon:hover{
+.accent-color.nav-icon:hover {
     color: lightskyblue;
 }
 
-.lines{
+.lines {
     position: fixed;
     display: flex;
     width: calc(100vw - 10rem);
@@ -94,118 +109,134 @@ section{
 }
 
 .intro {
-    margin: 3rem 5rem;
+    margin: 5rem 5rem;
     width: 60vw;
     font-size: 80px;
     font-weight: 800;
 }
 
-.below-header{
+.below-header {
     margin-top: 10px;
+    top: 65px;
     font-family: var(--secondary-font);
     font-size: small;
+    font-weight: 600;
 }
 
-.container{
+.container {
     display: flex;
     width: calc(100vw - 10rem);
     justify-content: space-between;
     align-items: center;
 }
 
-.container-mod{
+.container-mod {
     display: flex;
     width: calc(100vw - 10rem);
     justify-content: space-between;
     align-items: center;
 }
 
-.white{
+.white {
     color: var(--title-color);
 }
 
-.subtext{
+.subtext {
     margin: 3rem 0;
     font-size: 40px;
     width: 60vw;
 }
 
-img{
+img {
     width: 30vw;
     border-radius: 20px;
     margin: 1rem;
 }
 
-svg{
+svg {
     color: var(--title-color);
 }
 
-.social{
+.social {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--line-color);
+    background-color: hsl(0, 0%, 22%);
     height: 55px;
     width: 55px;
     border-radius: 50%;
 }
 
-.social:hover{
+.social:hover {
     background-color: var(--text-color);
     transition: 0.2s;
 }
 
-@media (max-width: 800px){
-    
-    .container-mod{
+.container-col {
+    margin: 1rem 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media (max-width: 800px) {
+
+    .container-mod {
         flex-direction: column;
     }
 
-    .desktop{
+    .desktop {
         display: none;
     }
 
     .intro {
-        
+        margin: 5rem;
         font-size: 40px;
         width: 80vw;
     }
 
-    .subtext{
+    .subtext {
         font-size: 30px;
     }
 
-    img{
+    img {
         width: 39vw;
         margin: 2rem 0;
     }
 }
 
-@media (max-width: 500px){
-    .header{
+@media (max-width: 500px) {
+    .navbar {
+        width: calc(100vw - 4rem);
+    }
+
+    .header {
         width: calc(100vw - 4rem);
         margin: 0 2rem;
     }
 
-    section{
-        margin: 0 2rem;
-    }
-
-    .lines{
+    .container {
         width: calc(100vw - 4rem);
     }
 
-    .container-mod{
+    section {
+        margin: 0 2rem;
+    }
+
+    .lines {
+        width: calc(100vw - 4rem);
+    }
+
+    .container-mod {
         width: calc(100vw - 4rem);
     }
 
     .intro {
-        margin: 3rem 2rem;
+        margin: 5rem 2rem;
         font-size: 30px;
     }
 
-    .subtext{
+    .subtext {
         font-size: 20px;
     }
-    
 }
