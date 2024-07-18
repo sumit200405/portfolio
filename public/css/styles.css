@@ -166,6 +166,7 @@ svg{
     }
 
     .intro {
+        
         font-size: 40px;
         width: 80vw;
     }
@@ -181,11 +182,30 @@ svg{
 }
 
 @media (max-width: 500px){
+    .header{
+        width: calc(100vw - 4rem);
+        margin: 0 2rem;
+    }
+
+    section{
+        margin: 0 2rem;
+    }
+
+    .lines{
+        width: calc(100vw - 4rem);
+    }
+
+    .container-mod{
+        width: calc(100vw - 4rem);
+    }
+
     .intro {
+        margin: 3rem 2rem;
         font-size: 30px;
     }
 
     .subtext{
         font-size: 20px;
     }
+    
 }
