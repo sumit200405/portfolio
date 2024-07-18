@@ -167,6 +167,7 @@ svg{
 
     .intro {
         font-size: 40px;
+        width: 80vw;
     }
 
     .subtext{
@@ -179,7 +180,7 @@ svg{
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 500px){
     .intro {
         font-size: 30px;
     }
