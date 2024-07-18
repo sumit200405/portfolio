@@ -156,6 +156,7 @@ svg{
 }
 
 @media (max-width: 800px){
+    
     .container-mod{
         flex-direction: column;
     }
@@ -165,11 +166,25 @@ svg{
     }
 
     .intro {
-        font-size: 50px;
+        font-size: 40px;
+    }
+
+    .subtext{
+        font-size: 30px;
     }
 
     img{
         width: 39vw;
         margin: 2rem 0;
+    }
+}
+
+@media (max-width: 400px){
+    .intro {
+        font-size: 30px;
+    }
+
+    .subtext{
+        font-size: 20px;
     }
 }
